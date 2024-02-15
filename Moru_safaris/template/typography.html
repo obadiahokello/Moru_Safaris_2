@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Tours{% endblock %}
+{% block content %}
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs-custom-inset">
+        <div class="breadcrumbs-custom context-dark bg-overlay-60">
+          <div class="container">
+            <h2 class="breadcrumbs-custom-title">Safaris</h2>
+            <ul class="breadcrumbs-custom-path">
+              <li><a href="index.html">Tours</a></li>
+              <li class="active">Safaris</li>
+            </ul>
+          </div>
+          <div class="box-position" style="background-image: url(https://c4.wallpaperflare.com/wallpaper/538/653/270/african-elephants-mother-and-adorable-babies-hd-wallpaper-wallpaper-preview.jpg);"></div>
+        </div>
+      </section>
+      <!-- Base typography-->
+      <section class="section section-sm bg-default">
+        <div class="container">
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Hot Safaris</span></h3>
+          <div class="row row-sm row-40 row-md-50">
+            {% for tour in tours %}
+            <div class="col-sm-6 col-md-12 wow fadeInRight">
+              <!-- Product Big-->
+              <article class="product-big">
+                <div class="unit flex-column flex-md-row align-items-md-stretch">
+                  <div class="unit-left"><a class="product-big-figure" href=""><img src="{{tour.image_url}}" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-body">
+                    <div class="product-big-body">
+                      <h4 class="product-big-title"><a href=""><span style="font-weight: 600;">{{tour.heading}}</span></a></h4>
+                      <div class="group-sm group-middle justify-content-start">
+                        <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">4 customer reviews</a>
+                      </div>
+                      <p class="product-big-text">{{tour.content}}
+                      </p><a class="button button-black-outline button-ujarak" href="{% url 'booking' %}">Buy This Tour</a>
+                      <div class="product-big-price-wrap"><span class="product-big-price">${{tour.price}}</span></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        </div>
+      </section>
+{% endblock %}
