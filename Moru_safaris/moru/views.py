@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import footer, tour, team, service
+from .models import footer, tour, team, service,htels
 
 
 # Create your views here.
@@ -56,7 +56,9 @@ def contact_us(request):
 
 def hotels(request):
     footers = footer.objects.all()
+    hootels = htels.objects.all()
     context = {
+        'hootels': hootels,
         'footers': footers,
     }
     return render(request, 'hotels.html', context)
@@ -67,7 +69,7 @@ def safaris(request):
     context = {
         'footers': footers,
     }
-    return render(request, 'safaris.html', context)
+    return render(request, 'ultimateeastafrica.html', context)
 
 
 def tours(request):
@@ -85,7 +87,7 @@ def ultimateeastafrica(request):
     context = {
         'footers': footers,
     }
-    return render(request, 'ultimateeastafrica.html', context)
+    return render(request, 'visitkenya.html', context)
 
 
 def visitkenya(request):
@@ -93,7 +95,7 @@ def visitkenya(request):
     context = {
         'footers': footers,
     }
-    return render(request, 'visitkenya.html', context)
+    return render(request, 'visitrwanda.html', context)
 
 
 def visitrwanda(request):
@@ -101,7 +103,7 @@ def visitrwanda(request):
     context = {
         'footers': footers,
     }
-    return render(request, 'visitrwanda.html', context)
+    return render(request, 'visitkenya.html', context)
 
 
 def visittz(request):
@@ -118,7 +120,7 @@ def visituganda(request):
     context = {
         'footers': footers,
     }
-    return render(request, 'visituganda', context)
+    return render(request, 'visituganda.html', context)
 
 
 def blog(request):
@@ -127,3 +129,4 @@ def blog(request):
         'footers': footers,
     }
     return render(request, 'blog.html', context)
+

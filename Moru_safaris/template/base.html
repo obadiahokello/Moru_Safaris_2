@@ -151,13 +151,13 @@
                   <div class="wow slideInLeft" data-wow-delay="0s">
                     <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
                     <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
-                      <li><a href="about">About us</a></li>
-                      <li><a href="tours">Our Tours</a></li>
+                      <li><a href="{% url 'about' %}">About us</a></li>
+                      <li><a href="{% url 'tours' %}">Our Tours</a></li>
                       <li><a href="{% url 'index' %}">Our Team</a></li>
                       <li><a href="{% url 'index' %}">Gallery</a></li>
                       <li><a href="blog">Blog</a></li>
                     </ul>
-                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="contact_us">Get in touch</a></div>
+                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="{% url 'contact_us' %}">Get in touch</a></div>
                   </div>
                 </div>
               </div>
