@@ -1,1 +1,0 @@
-web gunicorn Moru_safaris.wsgi:application --log-file -

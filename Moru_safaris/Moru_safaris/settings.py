@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-^n85f4=fw!fq8(_*a-ry-qz$$pbkc+a*g7xp^!w-%59)kr^@pc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.morusafaris.com']
+ALLOWED_HOSTS = ['.vercel.app' '.now.sh' '127.0.0.1' 'localhost']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'Moru_safaris.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'VlscRfOkboffCXzahEIJIxwYacVeWlsb',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': 32256,
     }
 }
 
@@ -116,9 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-django_heroku.settings(locals())
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
