@@ -1,6 +1,6 @@
-pip install venv
-python3 -m venv Moru
-source Moru/bin/activate
+pip install virtualvenv
+virtualenv -p python3 venv
+source venv/Scripts/activate
 
 pip install --upgrade pip
 pip install -r requirements.txt
