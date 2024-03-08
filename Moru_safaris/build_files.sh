@@ -1,5 +1,5 @@
 pip install venv
-python -m venv Moru
+python3 -m venv Moru
 source Moru/bin/activate
 
 pip install --upgrade pip
