@@ -1,3 +1,4 @@
+pip install venv
 python -m venv Moru
 source Moru/bin/activate
 
