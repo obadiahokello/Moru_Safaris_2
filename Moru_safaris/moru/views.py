@@ -56,9 +56,9 @@ def contact_us(request):
 
 def hotels(request):
     footers = footer.objects.all()
-    hootels = htels.objects.all()
+    hotels = htels.objects.all()
     context = {
-        'hootels': hootels,
+        'hotels': hotels,
         'footers': footers,
     }
     return render(request, 'hotels.html', context)
